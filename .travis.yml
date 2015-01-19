@@ -4,6 +4,8 @@ language: ruby
 bundler_args: --without development
 script: 'bundle exec rake travis'
 cache: bundler
+env:
+  - LANG="en_US.UTF-8" LC_ALL="en_US.UTF-8"
 matrix:
   fast_finish: true
   include:
