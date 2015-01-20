@@ -5,12 +5,8 @@ PuppetSyntax.exclude_paths = ['spec/fixtures/**/*', 'pkg/**/*', 'vendor/**/*']
 
 require 'puppet-lint/tasks/puppet-lint'
 Rake::Task[:lint].clear
-PuppetLint::RakeTask.new :lint do |config|
-  config.relative = true
-  config.disable_80chars
-  config.disable_arrow_alignment
-  config.disable_class_parameter_defaults
-  config.disable_class_inherits_from_params_class
-  config.disable_autoloader_layout
-  config.ignore_paths = ["spec/**/*.pp","pkg/**/*.pp","vendor/**/*.pp"]
+PuppetLint::RakeTask.new :lint do
+  PuppetLint.configuration.disable_checks = ['80chars','arrow_alignment','disable_class_inherits_from_params_class','class_parameter_defaults']
+  PuppetLint.configuration.ignore_paths = ["spec/**/*.pp","pkg/**/*.pp","vendor/**/*.pp"]
+  PuppetLint.configuration.relative = true
 end
