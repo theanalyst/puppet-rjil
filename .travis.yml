@@ -8,10 +8,10 @@ matrix:
   fast_finish: true
   include:
   - rvm: 1.9.3
-    env: PUPPET_GEM_VERSION="~> 3.6.0" LANG="en_US.UTF-8" LC_ALL="en_US.UTF-8"
+    env: PUPPET_GEM_VERSION="~> 3.6.0"
   - rvm: 1.9.3
-    env: PUPPET_GEM_VERSION="~> 3.0" LANG="en_US.UTF-8" LC_ALL="en_US.UTF-8"
+    env: PUPPET_GEM_VERSION="~> 3.0"
   - rvm: 2.0.0
-    env: PUPPET_GEM_VERSION="~> 3.0" LANG="en_US.UTF-8" LC_ALL="en_US.UTF-8"
+    env: PUPPET_GEM_VERSION="~> 3.0"
 notifications:
   email: false
