@@ -6,4 +6,5 @@ group :development, :test do
   gem 'rspec-puppet-utils'
   gem 'mocha', '~>0.10.5'
   gem 'librarian-puppet-simple'
+  gem 'puppet-lint', :git => 'https://github.com/rodjek/puppet-lint.git', :ref => '5a8c45241'
 end
