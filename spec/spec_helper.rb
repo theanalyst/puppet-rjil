@@ -11,3 +11,5 @@ if Puppet.version < "4.0.0"
     $LOAD_PATH << lib_dir
   end
 end
+
+Coveralls.wear!

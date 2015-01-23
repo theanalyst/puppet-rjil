@@ -6,4 +6,5 @@ group :development, :test do
   gem 'rspec-puppet-utils'
   gem 'mocha', '~>0.10.5'
   gem 'librarian-puppet-simple'
+  gem 'coveralls', require: false
 end
