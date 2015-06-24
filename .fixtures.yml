@@ -64,8 +64,8 @@ fixtures:
       repo: https://github.com/puppetlabs/puppetlabs-apache
       ref: 1.2.0
     ceph:
-      repo: https://github.com/jiocloud/puppet-ceph
-      ref: 'origin/svn_to_git_2'
+      repo: https://github.com/theanalyst/puppet-ceph
+      ref: f/object-skew
     apt:
       repo: https://github.com/puppetlabs/puppetlabs-apt
       ref: 1.8.0
