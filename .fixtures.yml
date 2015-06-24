@@ -65,7 +65,7 @@ fixtures:
       ref: 1.2.0
     ceph:
       repo: https://github.com/theanalyst/puppet-ceph
-      ref: f/object-skew
+      ref: origin/f/object-skew
     apt:
       repo: https://github.com/puppetlabs/puppetlabs-apt
       ref: 1.8.0
