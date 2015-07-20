@@ -594,7 +594,7 @@ rjil::system::apt::repositories:
       =iZW7
       -----END PGP PUBLIC KEY BLOCK-----
   ceph:
-    location: 'http://ceph.com/debian-giant'
+    location: 'http://ceph.com/debian-hammer'
     release: 'trusty'
     repos: 'main'
     include_src: false
