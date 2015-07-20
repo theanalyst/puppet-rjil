@@ -183,5 +183,10 @@ class rjil::ceph::osd (
     secret   => 'AQCNhbZTCKXiGhAAWsXesOdPlNnUSoJg7BZvsw==',
   }
 
+  ceph_config {
+    'osd/debug osd': value => 20;
+    'osd/debug ms': value => 20;
+  }
+
   ## End of ceph_setup
 }
