@@ -17,6 +17,7 @@ class rjil::ceph::radosgw (
 
   ensure_packages($ssl_secrets_package_name, {ensure => $jiocloud_ssl_cert_package_ensure})
 
+  Ceph::Pool <||> -> Service['radosgw']
   ##
   # Validation tests
   ##
