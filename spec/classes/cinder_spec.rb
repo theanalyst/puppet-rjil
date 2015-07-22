@@ -32,6 +32,8 @@ describe 'rjil::cinder' do
       'rjil::cinder::localbind_port'                => 18776,
       'rjil::cinder::public_port'                   => 8776,
       'rjil::cinder::volume_nofile'                 => 100,
+      'rjil::cinder::database_max_pool_size'        => 100,
+      'rjil::cinder::database_max_overflow'         => 100,
     }
   end
 
@@ -99,6 +101,8 @@ describe 'rjil::cinder' do
       ['cinder-api', 'cinder-scheduler', 'cinder-volume', 'cinder-manage'].each do |x|
         should contain_rjil__jiocloud__logrotate(x).with_logdir('/var/log/cinder')
       end
+      should contain_cinder_config('database/max_pool_size').with_value(100)
+      should contain_cinder_config('database/max_overflow').with_value(100)
     end
   end
   context 'with ssl' do

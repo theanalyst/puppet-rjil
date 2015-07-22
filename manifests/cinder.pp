@@ -65,6 +65,8 @@ class rjil::cinder (
   $rewrites                = undef,
   $headers                 = undef,
   $use_default_quota_class = false,
+  $database_max_pool_size  = 50,
+  $database_max_overflow    = 70,
 ) {
 
   ######################## Service Blockers and Ordering
@@ -275,5 +277,11 @@ class rjil::cinder (
                   ]
   rjil::jiocloud::logrotate { $cinder_logs:
     logdir => '/var/log/cinder'
+  }
+
+  # Add cinder database options
+  cinder_config {
+    'database/max_pool_size' :value => $database_max_pool_size;
+    'database/max_overflow'  :value => $database_max_overflow;
   }
 }
