@@ -47,7 +47,9 @@ class rjil::ceph (
   $public_network         = undef,
   $public_if              = eth0,
   $osd_journal_type       = 'filesystem',
-  $pool_default_size      = 3
+  $pool_default_size      = 3,
+  $osd_client_op_priority = undef,
+  $osd_recovery_op_priority = undef,
 ) {
 
   anchor {'rjil::ceph::start':
@@ -120,5 +122,11 @@ class rjil::ceph (
     postrotate    => '/usr/local/bin/ceph-postrotate.sh',
     sharedscripts => true,
     missingok     => true,
+  }
+
+  # set op priorities
+  ceph_config{
+    'global/osd client op priority': value=>$osd_client_op_priority;
+    'global/osd recovery op priority': value=>$osd_recovery_op_priority;
   }
 }

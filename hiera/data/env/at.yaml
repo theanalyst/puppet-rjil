@@ -5,7 +5,8 @@ rjil::jiocloud::consul::encrypt: "%{consul_gossip_encrypt}"
 rjil::ceph::osd::autogenerate: true
 rjil::ceph::osd::autodisk_size: 10
 rjil::ceph::osd::osd_journal_size: 2
-
+rjil::ceph::osd_client_op_priority: 20
+rjil::ceph::osd_recovery_op_priority: 40
 # Only Qemu is supported on virtual testing environment
 nova::compute::libvirt::libvirt_virt_type: qemu
 
